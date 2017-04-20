@@ -23,6 +23,7 @@ article section {
 }
 
 #current-article:not(.example-enter):not(.example-leave) {
+  -webkit-overflow-scrolling: touch;
   bottom: 43px !important;
   left: 0 !important;
   overflow-y: scroll;

@@ -16,6 +16,7 @@ html {
 @media only screen and (min-width: 1200px) { html { font-size: 62.5%; } }
 
 #app {
+  -webkit-overflow-scrolling: touch;
   height: 100%;
   overflow-y: scroll;
   width: 100%;
