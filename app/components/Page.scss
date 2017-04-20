@@ -1,0 +1,390 @@
+/** Page Component **/
+article section {
+  padding: 0 20px;
+  transition: all .5s ease;
+}
+
+#current-article {
+  background: #fff;
+  border-bottom: 0 solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: fixed;
+  transition: .5s ease all;
+  z-index: 3;
+}
+
+#current-article.example-enter-active {
+  z-index: 4;
+}
+
+#current-article.example-leave-active {
+  z-index: 2;
+}
+
+#current-article:not(.example-enter):not(.example-leave) {
+  bottom: 43px !important;
+  left: 0 !important;
+  overflow-y: scroll;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+#current-article.example-enter header h2,
+#current-article.example-leave header h2 {
+  max-width: 240px;
+}
+
+#current-article.example-enter section,
+#current-article.example-leave section,
+#current-article.example-enter .visit-project,
+#current-article.example-leave .visit-project {
+  opacity: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  #current-article[style="top: 100%; left: 0px; right: 0px; bottom: auto;"] {
+    bottom: 100% !important;
+    top: -100% !important;
+  }
+
+  #current-article:not(.example-enter):not(.example-leave) {
+    bottom: 0 !important;
+    top: 43px !important;
+  }
+
+  .page-header.hide p {
+    margin-top: -2em;
+  }
+
+  .page-header.minimise.hide p {
+    margin-top: -1.25em;
+  }
+}
+
+#current-article article {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+#current-article article > div {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+}
+
+#current-article article .about-contact {
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+#current-article article > a {
+  cursor: pointer;
+  display: block;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+#current-article header h1 a {
+  color: inherit;
+}
+
+/* General */
+article ul {
+  padding: 1em;
+}
+
+article li {
+  padding: .4em 0;
+}
+
+article section p.small-images {
+  margin: 2rem -20px;
+  text-align: center;
+}
+
+article section p.small-images img {
+  margin: 5px 5px;
+  max-width: 50%;
+  max-width: calc(50% - 10px);
+  vertical-align: top;
+  width: auto;
+}
+
+article section p.icons-dark {
+  background: #000;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 0 2rem;
+  padding: 5px;
+}
+
+article section img:only-child {
+  margin: 2rem 0;
+}
+
+article section img.right {
+  max-width: 1000px;
+  width: 250%;
+}
+
+article section img.left {
+  float: right;
+  max-width: 1000px;
+  width: 250%;
+}
+
+article section img.center {
+  margin: 2rem -20px;
+  max-width: 1200px;
+  width: 104%;
+  width: calc(100% + 40px);
+}
+
+@media only screen and (min-width: 660px) {
+  article section img:only-child {
+    float: none;
+    margin: 2rem -20px;
+    width: calc(100% + 40px);
+  }
+
+  article section p.icons-dark {
+    margin: 0 -20px 2rem;
+  }
+}
+
+.technology span {
+  background: #ccc;
+  border-radius: 4px;
+  color: #fff;
+  cursor: default;
+  display: inline-block;
+  padding: 2px 8px;
+}
+
+.visit-project {
+  background: #ccc;
+  border-radius: 1.2em;
+  color: #fff;
+  display: inline-block;
+  height: 1.2em;
+  margin-left: .4em;
+  max-width: 1.2em;
+  overflow: hidden;
+  position: relative;
+  text-indent: 500px;
+  transition: .5s ease all;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.visit-project:before {
+  content: 'visit';
+  display: block;
+  left: .6em;
+  line-height: 1.2em;
+  margin-top: -.6em;
+  position: absolute;
+  text-indent: 0;
+  top: 50%;
+}
+
+.visit-project:after {
+  background: url('../images/icon-link.png') no-repeat center center;
+  background-color: inherit;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.2em;
+}
+
+a:hover .visit-project {
+  background-color: #666;
+  max-width: 2.6em;
+}
+
+/* About */
+#current-article img.avatar {
+  border-radius: 1000px;
+  margin: 0 0 20px;
+}
+
+.about-contact {
+  min-width: 320px;
+}
+
+.about-contact .contact * {
+  text-align: center;
+}
+
+#current-article .about-contact header, #current-article .about-contact section {
+  min-width: 0;
+  width: auto;
+}
+
+@media only screen and (min-width: 500px) {
+  #current-article .about-contact div.contact {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 220px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #current-article .about-contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  #current-article .about-contact .about {
+    flex-basis: calc(100% - 220px);
+  }
+
+  #current-article .about-contact div.contact {
+    flex-basis: 220px;
+    margin: 0;
+  }
+}
+
+/* Resume */
+#current-article header.resume h1,
+#current-article header.resume h2 {
+  text-align: center;
+}
+
+@media only screen and (min-width: 420px) {
+  #current-article .resume {
+    max-width: 420px;
+  }
+
+  .resume h4 span {
+    float: right;
+    padding-top: 1rem;
+  }
+}
+
+.resume .experience {
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  #current-article section.resume {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+  }
+
+  #current-article section.resume .experience {
+    flex-basis: calc(70% - 20px);
+  }
+
+  #current-article section.resume .details {
+    flex-basis: calc(30% - 20px);
+    order: -1;
+  }
+
+  #current-article section.resume p {
+    flex: 0 1 100%;
+  }
+
+  .resume .details, .resume .details p {
+    text-align: right;
+  }
+
+  .resume h6 span {
+    float: left;
+    padding-top: .6rem;
+    text-align: left;
+    width: 60px;
+  }
+
+  .resume blockquote p {
+    float: right;
+    font-style: italic;
+    font-weight: 600;
+    max-width: 220px;
+  }
+}
+
+.resume h3:nth-child(n+2), .resume blockquote {
+  margin-top: 20px;
+}
+
+.resume h4 span {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.resume h6 span {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.resume h6 ~ p:nth-child(n+2) {
+  margin-top: 0;
+}
+
+.resume p.skills span {
+  display: block;
+}
+
+.resume p.skills span span {
+  display: inline-block;
+}
+
+.resume blockquote p {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.resume blockquote p:before, blockquote p:after {
+  content: '"';
+  display: inline-block;
+  font-size: 2.4rem;
+  line-height: 1.6rem;
+  text-align: center;
+  width: 14px;
+}
+
+.resume blockquote p:after {
+  content: '"';
+  margin: 0 -12px 0 -2px;
+  vertical-align: top;
+}
+
+.resume footer {
+  clear: both;
+}
+
+.resume cite {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.resume cite span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.resume cite, .resume blockquote + p {
+  padding-top: 5px;
+}
+
+.resume blockquote + p small {
+
+  font-size: 1.2rem;
+  font-weight: 300;
+}

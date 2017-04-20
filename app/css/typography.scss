@@ -1,0 +1,72 @@
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.button {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+body,
+h4 span,
+.visit-project:before {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+h1, h3, h4, h6,
+cite,
+.page-header p,
+#splash {
+  font-family: 'Dosis', Helvetica, Arial, sans-serif;
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 500px) {
+  p {
+    text-align: justify;
+  }
+}
+
+p:nth-child(n+2),
+h4:nth-child(n+2),
+p.skills:nth-child(n+2) {
+  margin-top: .4em;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+header h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+h3 {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.73rem;
+}
+
+h6 {
+  font-size: 2.1rem;
+  margin-top: .4em;
+}

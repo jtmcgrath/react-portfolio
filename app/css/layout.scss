@@ -1,0 +1,57 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-color: #fff;
+  font-size: 52.5%;
+  min-width: 320px;
+}
+
+@media only screen and (min-width: 600px)  { html { font-size: 55%;   } }
+@media only screen and (min-width: 800px)  { html { font-size: 57.5%; } }
+@media only screen and (min-width: 1000px) { html { font-size: 60%;   } }
+@media only screen and (min-width: 1200px) { html { font-size: 62.5%; } }
+
+#app {
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.page-footer,
+#current-article header,
+#current-article section {
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 320px;
+  padding: 20px;
+  width: 100%;
+  width: calc(300px + 50vw);
+}
+
+@media only screen and (min-width: 600px) {
+  .page-footer,
+  #current-article header,
+  #current-article section {
+    max-width: 1000px;
+  }
+}
+
+#splash {
+  align-items: center;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: 300;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 6;
+}

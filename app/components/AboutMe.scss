@@ -1,0 +1,40 @@
+/* About Me Component */
+#about-me {
+  align-items: center;
+  background: #43BAB7 url('../images/header.gif') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 20px;
+  min-height: 30vw;
+  padding: 4rem;
+}
+
+@media only screen and (min-width: 800px) {
+  #about-me {
+    height: 30vw;
+    max-height: 400px;
+    min-height: unset;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #about-me {
+    background-size: auto;
+  }
+}
+
+#about-me h2, #about-me p {
+  color: #fff;
+  max-width: 700px;
+  width: 100%;
+}
+
+#about-me h2 {
+  font-size: 3rem;
+}
+
+#about-me p {
+  font-size: 2rem;
+}

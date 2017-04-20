@@ -1,0 +1,65 @@
+.project-list a {
+  color: inherit;
+}
+
+/** Grey **/
+/* Light */
+#splash,
+.page-footer p,
+p.skills span span {
+  color: #BFBFBF;
+}
+
+.about-contact section ~ header,
+.about-contact section ~ section {
+  background: #f2f2f2;
+}
+
+/* Medium */
+h4 span,
+h6 span,
+h6 + p,
+.resume blockquote + p small {
+  color: #999;
+}
+
+/** Turquoise **/
+/* Medium */
+a,
+h5,
+blockquote p,
+article header h2,
+.page-header a,
+#current-article header.resume h2 {
+  color: #3FC4C0;
+}
+
+h3 {
+  border-color: #3FC4C0;
+}
+
+a.button,
+.about-contact .contact,
+#controls-close:before,
+#controls-close:after {
+  background: #3FC4C0;
+}
+
+/* Dark */
+.page-header a:hover,
+#controls-close:hover {
+  color: #36A6A1;
+}
+
+a.button:hover,
+#controls-close:hover:before,
+#controls-close:hover:after {
+  background: #36A6A1;
+}
+
+/** White **/
+a.button,
+.about-contact .contact,
+.about-contact .contact a {
+  color: #fff;
+}
