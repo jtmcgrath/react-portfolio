@@ -33,7 +33,9 @@ let config = {
     new CopyWebpackPlugin([
       {from: "app/static"},
       {from: "app/images", to: "images"}
-    ]),
+    ], {
+      ignore: ["*.db"]
+    }),
     new HtmlWebpackPlugin({
       template: "./app/index.html"
     }),
