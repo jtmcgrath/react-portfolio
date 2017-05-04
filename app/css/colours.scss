@@ -17,10 +17,11 @@ p.skills span span {
 
 /* Medium */
 h4 span,
+h5 span,
 h6 span,
 h6 + p,
 .resume blockquote + p small {
-  color: #999;
+  opacity: .7;
 }
 
 /** Turquoise **/

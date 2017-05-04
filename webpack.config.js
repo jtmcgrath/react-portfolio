@@ -47,7 +47,7 @@ let config = {
       }
     }),
     new ExtractTextPlugin({
-      filename: "style.css",
+      filename: "style.[hash].css",
       allChunks: true
     })
   ]
