@@ -195,7 +195,7 @@ article {
   vertical-align: bottom;
   white-space: nowrap;
 
-  :before {
+  &:before {
     content: 'visit';
     display: block;
     left: .6em;
@@ -206,7 +206,7 @@ article {
     top: 50%;
   }
 
-  :after {
+  &:after {
     background: url('../images/icon-link.png') no-repeat center center;
     background-color: inherit;
     content: '';
@@ -220,7 +220,7 @@ article {
 
   a:hover & {
     background-color: #666;
-    max-width: 2.6em;
+    max-width: 2.8em;
   }
 } // .visit-project
 
@@ -293,8 +293,8 @@ article {
   }
 
   .experience h3:first-child {
-    height: 54px;
-    line-height: 70px;
+    height: 64px;
+    line-height: 80px;
   }
 
   h3:nth-child(n+2),
