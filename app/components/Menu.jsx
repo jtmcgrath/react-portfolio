@@ -5,6 +5,14 @@ import { Link, Route } from "react-router-dom";
 import "./Menu.scss";
 
 const MenuItem = ({children, to, id, exact}) => {
+  if (to.substring(0,4) === "http") {
+    return (
+      <li id={children.toLowerCase()}>
+        <a href={to} target="blank">{children}</a>
+      </li>
+    );
+  }
+
   return (
     <Route path={to} exact={exact} children={({match}) => (
       <li id={id} className={match ? "active" : null}>

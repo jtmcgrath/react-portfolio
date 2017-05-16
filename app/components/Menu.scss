@@ -1,24 +1,26 @@
 /** Menu Component **/
 /* Icons */
-#about, #resume {
+#about,
+#github,
+#resume {
   position: relative;
-}
 
-#about:before, #resume:before, a.phone:before, a.email:before {
-  background: transparent no-repeat center center;
-  content: '';
-  display: inline-block;
-  height: 24px;
-  vertical-align: top;
-  width: 30px;
-}
+  &:before, a.phone:before, a.email:before {
+    background: transparent no-repeat center center;
+    content: '';
+    display: inline-block;
+    height: 24px;
+    vertical-align: top;
+    width: 30px;
+  }
 
-#about:before, #resume:before {
-  display: block;
-  left: 50%;
-  margin-left: -15px;
-  position: absolute;
-  top: 3px;
+  &:before {
+    display: block;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    top: 3px;
+  }
 }
 
 #resume:before {
@@ -27,6 +29,10 @@
 
 #about:before {
   background-image: url('../images/icon-resume.png');
+}
+
+#github:before {
+  background-image: url('../images/icon-github.png');
 }
 
 a.phone:before {
@@ -42,44 +48,44 @@ a.email:before {
   opacity: 1;
   position: relative;
   transition: .2s ease max-width .2s, .5s ease opacity .4s;
-}
 
-#controls-close:before, #controls-close:after {
-  content: '';
-  height: 2px;
-  left: 50%;
-  margin: -1px;
-  position: absolute;
-  top: 35%;
-  transform: rotate(135deg);
-  transition: all .5s ease .4s;
-  width: 2px;
-}
+  &:before, &:after {
+    content: '';
+    height: 2px;
+    left: 50%;
+    margin: -1px;
+    position: absolute;
+    top: 35%;
+    transform: rotate(135deg);
+    transition: all .5s ease .4s;
+    width: 2px;
+  }
 
-#controls-close:before {
-  margin-left: -10px;
-  width: 20px;
-}
+  &:before {
+    margin-left: -10px;
+    width: 20px;
+  }
 
-#controls-close:after {
-  height: 20px;
-  margin-top: -10px;
-}
+  &:after {
+    height: 20px;
+    margin-top: -10px;
+  }
 
-#controls-close:hover:before, #controls-close:hover:after {
-  transition: all .5s ease;
-}
+  &:hover:before, &:hover:after {
+    transition: all .5s ease;
+  }
 
-#controls-close.active {
-  max-width: 0;
-  opacity: 0;
-  transition: max-width .2s ease .2s, opacity .5s ease;
-}
+  &.active {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width .2s ease .2s, opacity .5s ease;
+  }
 
-#controls-close.active:before, #controls-close.active:after {
-  height: 2px;
-  transform: rotate(0);
-  transition: .5s ease all;
-  margin: -1px;
-  width: 2px;
+  &.active:before, &.active:after {
+    height: 2px;
+    transform: rotate(0);
+    transition: .5s ease all;
+    margin: -1px;
+    width: 2px;
+  }
 }

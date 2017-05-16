@@ -4,6 +4,11 @@
         "title": "About",
         "content": ""
     },
+    "https://github.com/jtmcgrath": {
+        "type": "page",
+        "title": "GitHub",
+        "content": ""
+    },
     "resume": {
         "type": "page",
         "title": "R\u00e9sum\u00e9",
