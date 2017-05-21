@@ -180,7 +180,8 @@ article {
   padding: 2px 8px;
 }
 
-.visit-project {
+.visit-project,
+.visit-repo {
   background: #ccc;
   border-radius: 1.2em;
   color: #fff;
@@ -218,11 +219,29 @@ article {
     width: 1.2em;
   }
 
-  a:hover & {
-    background-color: #666;
+  a:hover &,
+  &:hover {
+    background-color: #3fc4c0;
     max-width: 2.8em;
   }
-} // .visit-project
+} // .visit-project, .visit-repo
+
+.visit-repo {
+  font-weight: 500;
+
+  &:before {
+    color: #fff;
+    content: "GitHub"
+  }
+
+  &:after {
+    background-image: url('../images/icon-github-white.png');
+  }
+
+  &:hover {
+    max-width: 3.6em;
+  }
+}
 
 /* About */
 #current-article {

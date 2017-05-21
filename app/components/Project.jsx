@@ -9,6 +9,13 @@ const Project = props => {
   let elementId = (showArticle) ? props.id + "-" + props.layout : props.id; // alternate id so that the getPosition function targets the in-list article element
   let imgAttrs = {height: "188px",  width: "280px",  alt: props.title, src: "/images/covers/300/" + props.id + "." + props.imagetype, className: "article-image"};
 
+  let repoLink = (showArticle && props.repo
+    ? <a href={props.repo} target="_blank" className="visit-repo">
+        View {props.title} on GitHub
+      </a>
+    : null
+  ); // repoLink
+
   let title = (showArticle && props.url
     ? <a href={props.url} target="_blank">
         {props.title}
@@ -21,7 +28,7 @@ const Project = props => {
 
   let header = (
     <header key="header">
-      <h1>{title}</h1>
+      <h1>{title}{repoLink}</h1>
       <h2>{props.subtitle}</h2>
     </header>
   ); // header
@@ -72,6 +79,7 @@ Project.propTypes = {
   id: PropType.string.isRequired,
   to: PropType.string.isRequired,
   url: PropType.string,
+  repo: PropType.string,
   title: PropType.string.isRequired,
   layout: PropType.string.isRequired,
   content: PropType.string,

@@ -19,6 +19,14 @@
         "title": "Sorry, Page Not Found",
         "content": ""
     },
+    "just-keep-walking": {
+        "type": "project",
+        "title": "Just Keep Walking",
+        "subtitle": "A React-powered progressive web app",
+        "imagetype": "jpg",
+        "url": "http:\/\/jkw.beyond.digital\/",
+        "repo": "https:\/\/github.com\/jtmcgrath\/just-keep-walking"
+    },
     "untitledtm": {
         "type": "project",
         "title": "untitledtm",
