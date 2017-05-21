@@ -106,7 +106,7 @@ article {
   }
 
   li {
-    padding: .4em 0;
+    margin: 1em 0;
   }
 
   section {
@@ -315,10 +315,13 @@ article {
 
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 2em;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     li {
-      padding-top: 0;
       position: relative;
 
       &:before {
