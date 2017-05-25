@@ -1,89 +1,93 @@
+@import "../css/variables.scss";
+
 /** Header Component **/
-.page-header p,
-.page-header ul {
-  text-align: center;
-}
+.page-header {
+  p,
+  ul {
+    text-align: center;
+  }
 
-.page-header p {
-  font-size: 4rem;
-  font-weight: 300;
-  line-height: 2;
-  transition: .5s ease all;
-}
+  p {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 2;
+    transition: $standard;
+  }
 
-.page-header nav {
-  background: #fff;
-  bottom: 0;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
-  left: 0;
-  line-height: 44px;
-  min-width: 320px;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 4;
-}
+  nav {
+    background: #fff;
+    bottom: 0;
+    box-shadow: $nav_shadow;
+    left: 0;
+    line-height: 44px;
+    min-width: 320px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+  }
 
-.page-header ul {
-  font-size: 0;
-}
+  ul {
+    font-size: 0;
+  }
 
-.page-header li {
-  display: inline-block;
-  font-size: 14px;
-  list-style-type: none;
-  overflow: hidden;
-  vertical-align: top;
-}
+  li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    overflow: hidden;
+    vertical-align: top;
+  }
 
-.page-header a {
-  cursor: pointer;
-  display: block;
-  height: 44px;
-  line-height: 64px;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
-  width: 64px;
+  a {
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    line-height: 64px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 64px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
   .page-header {
     background: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: $nav_shadow;
     left: 0;
     margin-bottom: 44px;
     position: fixed;
     right: 0;
     top: 0;
-    transition: .5s ease all;
+    transition: $standard;
     z-index: 5;
+
+    &.minimise p {
+  	  font-size: 3.2rem;
+      line-height: 1.25;
+    }
+
+    nav {
+      bottom: auto;
+      box-shadow: none;
+      position: relative;
+      top: 100%;
+      transition: $standard;
+    }
+
+    nav ul {
+      overflow: hidden;
+    }
+
+    nav ul div {
+      justify-content: flex-start;
+      top: 100%;
+    }
   }
 
   #about-me {
     border-top: calc(8rem + 44px) solid #43BAB7;
     box-sizing: content-box;
-  }
-
-  .page-header nav {
-    bottom: auto;
-    box-shadow: none;
-    position: relative;
-    top: 100%;
-    transition: .5s ease all;
-  }
-
-  .page-header.minimise p {
-	  font-size: 3.2rem;
-    line-height: 1.25;
-  }
-
-  .page-header nav ul {
-    overflow: hidden;
-  }
-
-  .page-header nav ul div {
-    justify-content: flex-start;
-    top: 100%;
   }
 }

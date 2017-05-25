@@ -1,3 +1,5 @@
+@import "../css/variables.scss";
+
 /** Menu Component **/
 /* Icons */
 #about,
@@ -72,7 +74,7 @@ a.email:before {
   }
 
   &:hover:before, &:hover:after {
-    transition: all .5s ease;
+    transition: $standard;
   }
 
   &.active {
@@ -84,7 +86,7 @@ a.email:before {
   &.active:before, &.active:after {
     height: 2px;
     transform: rotate(0);
-    transition: .5s ease all;
+    transition: $standard;
     margin: -1px;
     width: 2px;
   }

@@ -1,34 +1,36 @@
+@import "../css/variables.scss";
+
 .project-list {
   font-size: 0;
   text-align: center;
-}
 
-.project-list article {
-  background: #fff no-repeat center center;
-  background-size: cover;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1rem;
-  margin: 0 20px 20px;
-  position: relative;
-  text-align: justify;
-  transition: .5s ease all;
-  width: 280px;
-}
+  article {
+    background: #fff no-repeat center center;
+    background-size: cover;
+    box-shadow: $article_shadow;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 20px 20px;
+    position: relative;
+    text-align: justify;
+    transition: $standard;
+    width: 280px;
 
-.project-list article:hover,
-.project-list article.active {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  transform: scale(1.05);
-  transition-delay: 0s;
-  z-index: 2;
-}
+    &:hover,
+    &.active {
+      box-shadow: $article_shadow_hover;
+      transform: scale(1.05);
+      transition-delay: 0s;
+      z-index: 2;
+    }
+  }
 
-.project-list a {
-  display: block;
-  height: 100%;
-  width: 100%;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -36,23 +38,25 @@
   	display: flex;
   	flex-wrap: wrap;
   	justify-content: center;
-  }
 
-  .project-list article {
-  	margin: 0 10px 20px;
+    article {
+    	margin: 0 10px 20px;
+    }
   }
 }
 
-article header {
-  padding: 20px;
+article {
+  header {
+    padding: 20px;
+  }
+
+  span img,
+  > a img {
+    width: 100%;
+    vertical-align: top;
+  }
 }
 
 #current-article section {
   padding-top: 0;
-}
-
-article span img,
-article > a img {
-  width: 100%;
-  vertical-align: top;
 }

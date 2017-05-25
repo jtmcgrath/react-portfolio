@@ -108,7 +108,7 @@ class Portfolio extends React.Component {
               )}
             </section>
             <Footer />
-            <CSSTransitionGroup component="div" transitionName="example" transitionEnterTimeout={10} transitionLeaveTimeout={400}>
+            <CSSTransitionGroup component="div" transitionName="rp" transitionEnterTimeout={10} transitionLeaveTimeout={400}>
               <Route
                 location={location}
                 key={location.pathname}
