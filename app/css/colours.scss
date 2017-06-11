@@ -1,3 +1,6 @@
+$turquoise: #3fc4c0;
+$turquoise-dark: #36a6a1;
+
 .project-list a {
   color: inherit;
 }
@@ -32,30 +35,30 @@ blockquote p,
 article header h2,
 .page-header a,
 #current-article header.resume h2 {
-  color: #3FC4C0;
+  color: $turquoise;
 }
 
 h3 {
-  border-color: #3FC4C0;
+  border-color: $turquoise;
 }
 
 a.button,
 .about-contact .contact,
 #controls-close:before,
 #controls-close:after {
-  background: #3FC4C0;
+  background: $turquoise;
 }
 
 /* Dark */
 .page-header a:hover,
 #controls-close:hover {
-  color: #36A6A1;
+  color: $turquoise-dark;
 }
 
 a.button:hover,
 #controls-close:hover:before,
 #controls-close:hover:after {
-  background: #36A6A1;
+  background: $turquoise-dark;
 }
 
 /** White **/

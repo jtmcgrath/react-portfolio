@@ -1,5 +1,10 @@
+@mixin responsive-typography( $min-width, $font-size ) {
+  @media only screen and (min-width: $min-width) { html { font-size: $font-size; } }
+}
+
 html,
-body {
+body,
+#app {
   height: 100%;
   width: 100%;
 }
@@ -10,16 +15,14 @@ html {
   min-width: 320px;
 }
 
-@media only screen and (min-width: 600px)  { html { font-size: 55%;   } }
-@media only screen and (min-width: 800px)  { html { font-size: 57.5%; } }
-@media only screen and (min-width: 1000px) { html { font-size: 60%;   } }
-@media only screen and (min-width: 1200px) { html { font-size: 62.5%; } }
+@include responsive-typography( 600px,  55%   );
+@include responsive-typography( 800px,  57.5% );
+@include responsive-typography( 1000px, 60%   );
+@include responsive-typography( 1200px, 62.5% );
 
 #app {
   -webkit-overflow-scrolling: touch;
-  height: 100%;
   overflow-y: scroll;
-  width: 100%;
 }
 
 .page-footer,
