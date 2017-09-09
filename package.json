@@ -12,7 +12,12 @@
   "babel": {
     "presets": [
       "react",
-      ["env", {"modules": false}]
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
     ]
   },
   "dependencies": {
