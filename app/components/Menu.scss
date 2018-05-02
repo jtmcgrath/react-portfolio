@@ -4,7 +4,8 @@
 /* Icons */
 #about,
 #github,
-#resume {
+#resume,
+#linkedin {
   position: relative;
 
   &:before, a.phone:before, a.email:before {
@@ -35,6 +36,15 @@
 
 #github:before {
   background-image: url('../images/icon-github.png');
+}
+
+#linkedin:before {
+  content: 'in';
+  text-indent:  0;
+  line-height: 1.3;
+  font-weight: bold;
+  color: #3ec4c0;
+  font-size: 18px;
 }
 
 a.phone:before {
