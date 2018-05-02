@@ -9,6 +9,11 @@
         "title": "GitHub",
         "content": ""
     },
+    "https://www.linkedin.com/in/joetmcgrath/": {
+        "type": "page",
+        "title": "LinkedIn",
+        "content": ""
+    },
     "resume": {
         "type": "page",
         "title": "R\u00e9sum\u00e9",
