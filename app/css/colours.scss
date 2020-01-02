@@ -43,6 +43,7 @@ h3 {
 }
 
 a.button,
+button.button,
 .about-contact .contact,
 #controls-close:before,
 #controls-close:after {
@@ -56,6 +57,7 @@ a.button,
 }
 
 a.button:hover,
+button.button:hover,
 #controls-close:hover:before,
 #controls-close:hover:after {
   background: $turquoise-dark;
@@ -63,6 +65,7 @@ a.button:hover,
 
 /** White **/
 a.button,
+button.button,
 .about-contact .contact,
 .about-contact .contact a {
   color: #fff;

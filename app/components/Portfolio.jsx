@@ -11,6 +11,7 @@ import Footer from "components/Footer";
 import AboutMe from "components/AboutMe";
 import Loading from "components/Loading";
 import Project from "components/Project";
+import NewPortfolioModal from "components/NewPortfolioModal";
 import scrollTo from "js/scrollTo";
 
 class Portfolio extends React.Component {
@@ -98,6 +99,7 @@ class Portfolio extends React.Component {
       <Router>
         <Route render={({location, match}) => (
           <div>
+            <NewPortfolioModal />
             <Header>
               <Menu pages={pages} />
             </Header>

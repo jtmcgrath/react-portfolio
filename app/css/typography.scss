@@ -1,15 +1,18 @@
-a {
+a,
+button {
   cursor: pointer;
   text-decoration: none;
 }
 
-a.button {
+a.button,
+button.button {
   border-radius: 5px;
   display: inline-block;
   padding: 0 20px;
 }
 
 body,
+button,
 h4 span,
 .visit-project:before,
 .visit-repo:before {
