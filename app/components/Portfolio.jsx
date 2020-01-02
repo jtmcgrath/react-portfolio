@@ -1,4 +1,4 @@
-import _ from "lodash";
+import transform from "lodash/transform";
 import React from "react";
 import axios from "axios";
 import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
@@ -49,7 +49,7 @@ class Portfolio extends React.Component {
       }
     } // parsers
 
-    return _.transform(data, parsers[type]);
+    return transform(data, parsers[type]);
   } // parseIndex
 
   getPage(target) {
@@ -72,7 +72,7 @@ class Portfolio extends React.Component {
   } // getPageContent
 
   objToArr(obj) {
-    return _.transform(obj, function(result, value, key) {
+    return transform(obj, function(result, value, key) {
       value.id = key;
       result.push(value);
     }, []);
